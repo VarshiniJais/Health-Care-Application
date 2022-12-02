@@ -12,7 +12,7 @@ const cPathologysTitle = "Pathology";
 const cAppointment = "Appointments";
 const cAdmin = "Admin";
 const cPerson = "Personal Data";
-const cSOS="SOS";
+const cSOS = "SOS";
 const cPRecords = "Records";
 const cReports = "Reports";
 const cSCM = "Supply Chain";
@@ -20,6 +20,7 @@ const cAddressBookTitle = "Address Book";
 const cAddressBookAddTitle = "Add Address Book";
 const cAddressBookEditTitle = "Edit Address Book";
 const cSignUpTitle = "Sign up";
+const cBackground = "Background";
 
 enum cMessageType { error, success }
 
@@ -41,7 +42,18 @@ const cSampleImage =
 
 const cBodyText = TextStyle(
   fontWeight: FontWeight.w400,
-  color: Colors.blueGrey,
+  color: Color.fromARGB(255, 123, 170, 170),
+);
+const cHead = TextStyle(
+  fontSize: 30.0,
+  fontWeight: FontWeight.w200,
+  color: Color.fromARGB(255, 4, 172, 194),
+);
+const cHome = TextStyle(
+  fontFamily: 'RobotoMono',
+  fontSize: 30.0,
+  fontWeight: FontWeight.w200,
+  color: Color.fromARGB(255, 5, 184, 76),
 );
 const cErrorText = TextStyle(
   fontWeight: FontWeight.w400,
@@ -49,7 +61,7 @@ const cErrorText = TextStyle(
 );
 const cWarnText = TextStyle(
   fontWeight: FontWeight.w400,
-  color: Colors.yellow,
+  color: Color.fromARGB(255, 194, 147, 19),
 );
 const cSuccessText = TextStyle(
   fontWeight: FontWeight.w400,

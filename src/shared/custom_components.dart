@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:src/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -35,6 +37,37 @@ class CustomMessage extends StatelessWidget {
   }
 }
 
+// class CustomMessageextends StatelessWidget {
+//     final bool toggleMessage;
+//   final toggleMessageType;
+//   final String toggleMessageTxt;
+//   const CustomMessage(
+//       {Key key,
+//       this.toggleMessage,
+//       this.toggleMessageType,
+//       this.toggleMessageTxt})
+//       : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         home: Scaffold(
+//       body: Container(
+//           width: double.infinity,
+//           height: double.infinity,
+//           decoration: BoxDecoration(
+//             image: DecorationImage(
+//                 image: AssetImage("images/background.jpg"), fit: BoxFit.cover),
+//           ),
+//           child: toggleMessage
+//               ? Text(toggleMessageTxt,
+//                   style: toggleMessageType == cMessageType.error.toString()
+//                       ? cErrorText
+//                       : cSuccessText)
+//               : null),
+//     ));
+//   }
+// }
+
 class CustomAdminNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,28 +96,28 @@ class CustomAdminNav extends StatelessWidget {
           width: 7,
           height: 7,
         ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.dashboard, color: Colors.deepOrange),
-              onPressed: () {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/purchase',
-                );
-              },
-            ),
-            Text(
-              "SupplyChain",
-              style: cBodyText,
-            ),
-          ],
-        ),
-        SizedBox(
-          width: 7,
-          height: 7,
-        ),
+        // Column(
+        //   mainAxisSize: MainAxisSize.min,
+        //   children: <Widget>[
+        //     IconButton(
+        //       icon: Icon(Icons.dashboard, color: Colors.deepOrange),
+        //       onPressed: () {
+        //         Navigator.pushReplacementNamed(
+        //           context,
+        //           '/purchase',
+        //         );
+        //       },
+        //     ),
+        //     Text(
+        //       "SupplyChain",
+        //       style: cBodyText,
+        //     ),
+        //   ],
+        // ),
+        // SizedBox(
+        //   width: 7,
+        //   height: 7,
+        // ),
         // Column(
         //   mainAxisSize: MainAxisSize.min,
         //   children: <Widget>[
@@ -222,7 +255,7 @@ class CustomGuestNav extends StatelessWidget {
             IconButton(
                 icon: Icon(Icons.wallet_travel, color: Colors.greenAccent),
                 onPressed: () => _launched = _launchInBrowser(
-                    'https://www.youtube.com/watch?v=MkV413X2Kmw&list=PLp0TENYyY8lHL-G7jGbhpJBhVb2UdTOhQ&index=1&t=698s')),
+                    'https://www.youtube.com/watch?v=c06dTj0v0sM')),
             Text(
               "ContactTracing",
               style: cBodyText,
@@ -412,76 +445,76 @@ class CustomAdminDrawer extends StatelessWidget {
             },
             subtitle: Text('visitor appointments'),
           ),
-          ListTile(
-            leading: Icon(Icons.healing_rounded, color: Colors.green),
-            title: Text(
-              "Vaccination",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/appointments',
-              )
-            },
-            subtitle: Text('Patient Vaccination'),
-          ),
-          ListTile(
-            leading: Icon(Icons.view_headline, color: Colors.greenAccent),
-            title: Text(
-              "OPD/IPD",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/appointments',
-              )
-            },
-            subtitle: Text('OPD/IPD'),
-          ),
-          ListTile(
-            leading: Icon(Icons.hot_tub, color: Colors.red),
-            title: Text(
-              "Pharmacy",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/appointments',
-              )
-            },
-            subtitle: Text('Pharmacy transactions'),
-          ),
-          ListTile(
-            leading: Icon(Icons.sanitizer, color: Colors.orangeAccent),
-            title: Text(
-              "Lab Results",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/appointments',
-              )
-            },
-            subtitle: Text('Patient Pathology Lab records'),
-          ),
-          ListTile(
-            leading: Icon(Icons.sms, color: Colors.deepPurple),
-            title: Text(
-              "Messages",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/appointments',
-              )
-            },
-            subtitle: Text('patient messages'),
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.healing_rounded, color: Colors.green),
+          //   title: Text(
+          //     "Vaccination",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/appointments',
+          //     )
+          //   },
+          //   subtitle: Text('Patient Vaccination'),
+          // ),
+          // ListTile(
+          //   leading: Icon(Icons.view_headline, color: Colors.greenAccent),
+          //   title: Text(
+          //     "OPD/IPD",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/appointments',
+          //     )
+          //   },
+          //   subtitle: Text('OPD/IPD'),
+          // ),
+          // ListTile(
+          //   leading: Icon(Icons.hot_tub, color: Colors.red),
+          //   title: Text(
+          //     "Pharmacy",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/appointments',
+          //     )
+          //   },
+          //   subtitle: Text('Pharmacy transactions'),
+          // ),
+          // ListTile(
+          //   leading: Icon(Icons.sanitizer, color: Colors.orangeAccent),
+          //   title: Text(
+          //     "Lab Results",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/appointments',
+          //     )
+          //   },
+          //   subtitle: Text('Patient Pathology Lab records'),
+          // ),
+          // ListTile(
+          //   leading: Icon(Icons.sms, color: Colors.deepPurple),
+          //   title: Text(
+          //     "Messages",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/appointments',
+          //     )
+          //   },
+          //   subtitle: Text('patient messages'),
+          // ),
           // ListTile(
           //   leading: Icon(Icons.movie, color: Colors.green),
           //   title: Text(
@@ -496,21 +529,21 @@ class CustomAdminDrawer extends StatelessWidget {
           //   },
           //   subtitle: Text('Video messages'),
           // ),
-          ListTile(
-            leading: Icon(Icons.dashboard, color: Colors.deepOrange),
-            title: Text(
-              "Supply Chain",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/purchase',
-              )
-            },
-            subtitle: Text('Manage supply chain'),
-            trailing: Icon(Icons.more_vert),
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.dashboard, color: Colors.deepOrange),
+          //   title: Text(
+          //     "Supply Chain",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/purchase',
+          //     )
+          //   },
+          //   subtitle: Text('Manage supply chain'),
+          //   trailing: Icon(Icons.more_vert),
+          // ),
           // ListTile(
           //   leading: Icon(Icons.receipt, color: Colors.lightBlue),
           //   title: Text(
@@ -625,20 +658,20 @@ class CustomGuestDrawer extends StatelessWidget {
             trailing: Icon(Icons.more_vert),
             isThreeLine: true,
           ),
-          ListTile(
-            leading: Icon(Icons.sms, color: Colors.deepPurple),
-            title: Text(
-              "Text",
-              style: cNavText,
-            ),
-            onTap: () => {
-              Navigator.pushReplacementNamed(
-                context,
-                '/records',
-              )
-            },
-            subtitle: Text('patient messages'),
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.sms, color: Colors.deepPurple),
+          //   title: Text(
+          //     "Text",
+          //     style: cNavText,
+          //   ),
+          //   onTap: () => {
+          //     Navigator.pushReplacementNamed(
+          //       context,
+          //       '/records',
+          //     )
+          //   },
+          //   subtitle: Text('patient messages'),
+          // ),
           ListTile(
             leading: Icon(Icons.sms, color: Colors.deepPurple),
             title: Text(
